@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        .card-body{
+          background-color: rgb(102, 34, 0);
+          color: snow;
+        }
+    
+        .btn-primary{
+          background-color:white;
+          color: black;
+          border:white;
+        }
+    </style>
+    <title>Magazines</title>
+</head>
+<body>
+    <div class="container">
+       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+         <div class="container-fluid">
+           <a class="navbar-brand" href="/"><i class="fa fa-home"></i>&nbsp;Home Page</a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+         </div>
+        </nav>
+       <br><br><br>
+       <h1>Magazine</h1><br>
+       <hr class="featurette-divider">
+       <table>
+       <% for(var i=0; i < data.length; i++) { %>
+        <tr>
+         
+       <div class="row">
+        <th>
+        <% if(i%2==0){%>
+           <div class="col-lg-6 mb-4">
+             <div class="card" style="width:400px">
+               <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+               <div class="card-body">
+                 <h4 class="card-title"><%=data[i].magazinename%> </h4>
+                 <p class="card-text"><%=data[i].author%></p>
+                 <p class="card-text"><%=data[i].description%></p>
+                 <a href="#" class="btn btn-primary stretched-link">Read Magazine</a>
+               </div>
+             </div>
+             <br>
+           </div>
+         <% } %>
+          </th>
+          <th>
+         <% if(i%2!=0){%>
+           <div class="col-lg-6 mb-4">
+             <div class="card" style="width:400px">
+               <div class="card-body">
+                <h4 class="card-title"><%=data[i].magazinename%> </h4>
+                <p class="card-text"><%=data[i].author%></p>
+                <p class="card-text"><%=data[i].description%></p>
+                 <a href="#" class="btn btn-primary stretched-link">Read Magazine</a>
+               </div>
+               <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar6.png" alt="Card image" style="width:100%">
+             </div>
+           </div>
+         <% } %>
+          </th>
+          </tr>
+         <% } %>
+
+       </div>
+     </div>
+    </table>
+     <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2021 Y3V, Inc. &middot; <a href="#"></p>
+  </footer>
+</body>
+</html>

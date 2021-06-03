@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 300px;
+    background: #aaa;
+  }
+  .jumbotron{
+      background-color: rgb(102, 34, 0);
+      color: white;
+  }
+  input[type=submit] {
+    background-color:rgba(0, 0, 0, 0.1);
+    margin-top: 0.8em;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #191c38;
+  }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Welcome To School of Computer Science</h1>
+  <p>All information you need regarding school of computer science is available here !!</p> 
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" style="margin-top: 0.5em;">MySoCSE</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active">
+            <form action="#">
+                <input type="submit" value="Home"><br><br>
+            </form></li>
+        <li><form action="/event" method="GET">
+                <input type="submit" value="Events"><br><br>
+            </form>
+        </li>
+        <li>
+            <form action="/announcement" method="GET">
+                <input type="submit" value="Announcements"><br><br>
+            </form>
+        </li>
+        <li>
+          <form action="/magazine" method="GET">
+              <input type="submit" value="Magazine"><br><br>
+          </form>
+      </li>
+        <li>
+            <form action="/login" method="GET">
+                <input type="submit" value="Modify"><br><br>
+            </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="padding: 0%;">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>About Department</h2>
+      <!-- <h5>Photo of Department</h5> -->
+      <div class="fakeimg"><img src="logo.PNG" alt="kletechlogo" style="height: 100%; width:100%;"></div>
+      <p>KLE Tech Computer Science & Engineering program provides a unique environment for learning through a curriculum designed for experiential learning. This experience is ensured by creating a curriculum designed by inputs from industry, academia and recent technological advancements.</p>
+      <h3>Contact</h3>
+      <p>You can connect  with us on following platforms</p>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="https://twitter.com/kletechbvb?lang=en">Twitter</a></li>
+        <li><a href="https://www.kletech.ac.in/">Official Site</a></li>
+        <li><a href="https://www.facebook.com/kletechbvb/">Facebook</a></li>
+        <li><a href="https://in.linkedin.com/school/b.-v.-bhoomaraddi-college-of-engg.-&-tech.-hubli/">Linkdin</a></li>
+      </ul>
+      <hr class="hidden-sm hidden-md hidden-lg">
+    </div>
+    <div class="col-sm-8">
+      <!-- <h2>TITLE HEADING</h2> -->
+      <br><br><br>
+      <div class="fakeimg"><img src="building.jpg" alt="kletechlogo" style="height: 100%; width:100%;"></div>
+      <p><b>Some Common Information Related To Department</b></p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad asperiores rem neque, assumenda tempore tenetur optio vitae consequuntur commodi quam eveniet iste nostrum a necessitatibus velit reiciendis. Soluta, odit tempore.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad asperiores rem neque, assumenda tempore tenetur optio vitae consequuntur commodi quam eveniet iste nostrum a necessitatibus velit reiciendis. Soluta, odit tempore.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad asperiores rem neque, assumenda tempore tenetur optio vitae consequuntur commodi quam eveniet iste nostrum a necessitatibus velit reiciendis. Soluta, odit tempore.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad asperiores rem neque, assumenda tempore tenetur optio vitae consequuntur commodi quam eveniet iste nostrum a necessitatibus velit reiciendis. Soluta, odit tempore.</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <br>
+      <!-- <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg">#</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div> -->
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>School of Computer Science</p>
+  <p>© 2021 KLE Technological University. All rights reserved.</p>
+</div>
+
+</body>
+</html>
