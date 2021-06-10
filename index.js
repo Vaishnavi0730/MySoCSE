@@ -294,7 +294,7 @@ app.post('/deleteannouncement',urlencodedParser,function(req,res){
     var myquery = { announcementtitle: announcementtitle };
     db.collection("achivement").deleteOne(myquery, function(err, obj) {
     if (err) throw err;
-    console.log(announcementtitle + " event  deleted from Event Collection");
+    console.log(announcementtitle + " announcement  deleted from Achivement Collection");
     res.redirect('update')
 
   });
