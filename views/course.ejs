@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        .card-body{
+          background-color: rgb(198,33,32);
+          color: snow;
+        }
+    
+        .btn-primary{
+          background-color:white;
+          color: black;
+          border:white;
+        }
+        .wrapper {
+          column-count: 2;
+          column-gap: 50px;
+          padding: 50px;
+        }
+        .jumbotron{
+          background-color: rgb(198,33,32);
+          color: white;
+          padding:60px;
+          border-radius: 15px ;
+        }
+
+    p {
+      line-height: 1.6; 
+      font-family: Helvetica;
+      text-align: justify;
+      margin: 0;
+      font-size: 14px;
+    }
+
+
+
+/**** For your reference ****/
+
+
+  /*
+If we had 3 boxes, we could draw them in order C, A, B by writing div:first-of-type{[...]group:2;} and div:nth-of-type(2) {[...]group:3;}, and so on.
+  */
+  html
+{
+	padding: 0 1em;
+	font-family: Calibri, sans-serif;
+}
+
+body
+{
+	margin: auto;
+}
+
+img
+{
+	width: 50%;
+  height: 50%;
+  padding: 3em
+}
+
+.image-left, .image-right
+{
+	margin: 1em 0;
+}
+
+@media (min-width: 20em)
+{
+	.image-left, .image-right
+	{
+		display: flex;
+		align-items: center;
+	}
+
+	.image-left img
+	{
+		margin-right: 1em;
+		float: left; /* fallback */
+	}
+
+	.image-right img
+	{
+		order: 1;
+		margin-left: 1em;
+		float: right; /* fallback */
+	}
+	
+	/* clearfix for fallback */
+	.image-left::after,
+	.image-right::after
+	{
+		content: "";
+  	display: block;
+		clear: both;
+	}
+}
+
+@media (min-width: 30em)
+{
+	.image-left img, .image-right img
+	{
+		flex-shrink: 0;
+	}
+}
+
+footer{
+  font-size: large;
+}
+
+
+</style>
+    <title>Courses</title>
+</head>
+<body>
+    <div class="container">
+      <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/"><i class="fa fa-home"></i>&nbsp;Home Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
+      </header>
+       <br><br><br>
+
+       <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>Courses Offered</h1>
+      </div>
+       
+
+      <div class="image-left">
+        <img src="  https://drive.google.com/thumbnail?id=1G-gHFABcbWyIb4iiSgeWSk6u7wLuJXGU" alt="Course BE"/>
+        <div>
+            <h1>Bachelor of Computer Science & Engineering</h1>
+            <p>The program contains an array of courses which are related to computation like design and analysis of algorithms, computer programming languages, software design, and computer hardware.</p>
+            <footer>(from Wikipedia)</footer>
+        </div>
+    </div>
+    
+    <div class="image-right">
+        <img src="https://drive.google.com/thumbnail?id=1GRvVR2k5AtUPy3dURndzUYjPzguMjhDR" alt="Mtech"/>
+        <div>
+            <h1>M.Tech Computer Science Engineering</h1>
+            <p>Post Graduation Program of Computer Science is designed to gain in depth knowledge of Computer Science and Engineering.</p>
+            <footer>(from Wikipedia)</footer>
+        </div>
+    </div>
+    <div class="image-left">
+        <img src="https://drive.google.com/thumbnail?id=1nn6ERE14z1_57xneP6CsDztA5cdTy97k" alt="PHD"/>
+        <div>
+            <h1>Ph. D. in Computer Science & Engineering</h1>
+            <p>The PhD program offers research in analysis of algorithms, computer programming languages, software design, and computer hardware.</p>
+            <footer>(from Wikipedia)</footer>
+        </div>
+    </div>
+
+    </div>
+    
+  <footer>
+      <p class="float-end float-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2021 Y3V, Inc. &middot; <a href="#"></p>
+  </footer>
+</body>
+</html>

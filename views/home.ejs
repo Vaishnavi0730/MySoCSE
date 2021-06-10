@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Website Example</title>
+  <title>Home Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
+  
   .fakeimg {
-    height: 300px;
+    text-align: left;
+    height: 50%;
+    width: 50%;
     background: #aaa;
   }
   .jumbotron{
-      background-color: rgb(102, 34, 0);
+      background-color: rgb(198,33,32);
       color: white;
   }
   input[type=submit] {
@@ -33,8 +36,8 @@
 <body>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
-  <h1>Welcome To School of Computer Science</h1>
-  <p>All information you need regarding school of computer science is available here !!</p> 
+  <h1>Welcome To School of Computer Science & Engineering</h1>
+  <!-- <p>All information you need regarding School of Computer Science & Engineering is available here !!</p>  -->
 </div>
 
 <nav class="navbar navbar-inverse">
@@ -49,27 +52,28 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active">
-            <form action="#">
-                <input type="submit" value="Home"><br><br>
-            </form></li>
         <li><form action="/event" method="GET">
                 <input type="submit" value="Events"><br><br>
             </form>
         </li>
         <li>
             <form action="/announcement" method="GET">
-                <input type="submit" value="Announcements"><br><br>
+                <input type="submit" value="Achivements"><br><br>
             </form>
         </li>
         <li>
           <form action="/magazine" method="GET">
-              <input type="submit" value="Magazine"><br><br>
+              <input type="submit" value="Magazines"><br><br>
           </form>
-      </li>
+        </li>
+        <li>
+          <form action="/course" method="GET">
+              <input type="submit" value="Courses Offered"><br><br>
+          </form>
+        </li>
         <li>
             <form action="/login" method="GET">
-                <input type="submit" value="Modify"><br><br>
+                <input type="submit" value="Admin Page"><br><br>
             </form>
         </li>
       </ul>
@@ -77,13 +81,14 @@
   </div>
 </nav>
 
-<div class="container" style="padding: 0%;">
+<div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h2>About Department</h2>
+      <h2>About KLETU</h2>
       <!-- <h5>Photo of Department</h5> -->
       <div class="fakeimg"><img src="logo.PNG" alt="kletechlogo" style="height: 100%; width:100%;"></div>
-      <p>KLE Tech Computer Science & Engineering program provides a unique environment for learning through a curriculum designed for experiential learning. This experience is ensured by creating a curriculum designed by inputs from industry, academia and recent technological advancements.</p>
+      <p>KLE Technological University (KLE Tech) has its roots in B. V. Bhoomaraddi College of Engineering and Technology, Hubli (BVB), one of the premier engineering institution of Karnataka. The founding organization KLE Society, Belgaum, established BVB college in 1947 with an aspiration of creating an institution that would lay the foundation of modern engineering education in northern region of Karnataka.</p>
+      <!-- <p>KLE Tech Computer Science & Engineering program provides a unique environment for learning through a curriculum designed for experiential learning. This experience is ensured by creating a curriculum designed by inputs from industry, academia and recent technological advancements.</p> -->
       <h3>Contact</h3>
       <p>You can connect  with us on following platforms</p>
       <ul class="nav nav-pills nav-stacked">
@@ -91,34 +96,69 @@
         <li><a href="https://www.kletech.ac.in/">Official Site</a></li>
         <li><a href="https://www.facebook.com/kletechbvb/">Facebook</a></li>
         <li><a href="https://in.linkedin.com/school/b.-v.-bhoomaraddi-college-of-engg.-&-tech.-hubli/">Linkdin</a></li>
+        <li><a href="https://www.kletech.ac.in/socse/contact-us/">Enquire Now</a></li>
       </ul>
       <hr class="hidden-sm hidden-md hidden-lg">
     </div>
     <div class="col-sm-8">
       <!-- <h2>TITLE HEADING</h2> -->
       <br><br><br>
-      <div class="fakeimg"><img src="building.jpg" alt="kletechlogo" style="height: 100%; width:100%;"></div>
-      <p><b>Some Common Information Related To Department</b></p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad asperiores rem neque, assumenda tempore tenetur optio vitae consequuntur commodi quam eveniet iste nostrum a necessitatibus velit reiciendis. Soluta, odit tempore.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad asperiores rem neque, assumenda tempore tenetur optio vitae consequuntur commodi quam eveniet iste nostrum a necessitatibus velit reiciendis. Soluta, odit tempore.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad asperiores rem neque, assumenda tempore tenetur optio vitae consequuntur commodi quam eveniet iste nostrum a necessitatibus velit reiciendis. Soluta, odit tempore.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad asperiores rem neque, assumenda tempore tenetur optio vitae consequuntur commodi quam eveniet iste nostrum a necessitatibus velit reiciendis. Soluta, odit tempore.</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <div class="fakeimg1"><img src="csebuilding.jpg" alt="kletechlogo" style="height: 100%; width:100%;"></div>
+      <!-- <p>Clite</p> -->
+      <!-- <p>KLE Tech Computer Science & Engineering program provides a unique environment for learning through a curriculum designed for experiential learning. This experience is ensured by creating a curriculum designed by inputs from industry, academia and recent technological advancements.</p> -->
       <br>
-      <!-- <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg">#</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div> -->
+      <p>
+        School of Computer Science and Engineering (SoCSE) offers graduate, post graduate and doctoral degree programs. 
+        The school provides a student centric learning environment with well equipped lab spaces, studio mode classrooms and smart classrooms. 
+        The vibrant learning environment is supported by large gathering areas for open houses, department seminars and discussion forums.
+      </p>
+      <p>
+        The school is making multiyear efforts significantly expanding and building collaborations 
+        with industry and academic institutions for teaching learning and research.
+      </p>
+      <p>
+        The curriculum is well designed by Board of Studies (BoS) constituted of experts from academia and industry.
+         The curriculum encompasses core computer science courses and facilitates experiential learning. Few courses are co-designed 
+         and co-delivered by experts from the industry. The curriculum structure provides opportunity for students to enhance the research 
+         skills by providing research based REU/IRP courses and Minor program for interdisciplinary learning. The structure also gives space 
+        for developing entrepreneurial skills, by offering projects at Center for Technology Innovation and Entrepreneurship (CTIE).
+      </p>
+      <p>
+        The school has well experienced faculty with expertise in the areas of Data Engineering, System Engineering and Network Engineering. 
+        SoCSE is a hub of activities in the areas of Artificial Intelligence (AI) and Data Analytics, High Performance Computing (HPC) and 
+        Cloud Computing and Networking.
+        To enhance the research eco system, state of the art research infrastructure in the above areas has been setup.
+      </p>
+      <p>
+        Co-curricular and extracurricular activities are conducted by the school to enhance interpersonal and leadership qualities. 
+        Students have participated in various national and state level events including KPIT Sparkle, Bosch INSCRIBE, 
+        Accenture Innovation Jockeys, 
+        and ACM International Collegiate Programming Contest (ICPC) for successive years and have won many accolades.
+      </p>
+      <p>
+        SoCSE has been regularly hosting hackathons including ‘Smart India Hackathon’ of MHRD and 
+        AICTE since three years. Apart from this hackathons from industries like Samsung R&D, 
+        Juniper Network and INSZoom are conducted regaularly. This has enabled students to excel in various national and 
+        international level competitions. This has also resulted in students getting high package offers. The school has 
+        produced quality professionals who are holding responsible positions and have added value to the IT industry across the globe. 
+        The school has good placement record with offers from companies 
+        like Microsoft, Samsung, Walmart, Juniper, AWS, Akamai, SAP, Sony, Informatica, etc..
+      </p>
+      <br>
     </div>
   </div>
 </div>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
-  <p>School of Computer Science</p>
-  <p>© 2021 KLE Technological University. All rights reserved.</p>
+  <p>School of Computer Science<br>
+    HELP DESK: 0836-2378103/105/106<br>
+  © 2021 KLE Technological University. All rights reserved.</p>
 </div>
 
 </body>
 </html>
+
+
+
+
+

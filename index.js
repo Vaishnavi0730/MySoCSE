@@ -5,6 +5,7 @@ var bodyParser = require("body-parser")
 var mongoose = require("mongoose")
 var PORT = process.env.PORT || 8080;
 
+
 const app = express()
 
 app.use(bodyParser.json())
@@ -19,9 +20,6 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true });
 app.set("view engine","ejs");
 app.use(express.static('static'));
 app.use(express.static('images'));
-
-
-//-------------------------------------------//
 
 //-------------------------------------------//
 
@@ -39,8 +37,6 @@ db.once('open',()=>console.log("Connected to Database"))
 
 //-------------------------------------------//
 
-//-------------------------------------------//
-
 app.get('/', function (req, res) {
     res.set({
         "Allow-access-Allow-Origin": '*'
@@ -49,10 +45,22 @@ app.get('/', function (req, res) {
 });
 
 app.get('/event',function(req,res){
-    db.collection("event").find().toArray(function(err, result) {
-        if (err) throw err;
-        res.render('event',{'data': result})
+    var mysort1 = { date: 1 , time: 1};
+    var mysort2 = { date: -1 , time: -1};
+    var present_date = new Date()
+    var query1 = {date: {$gt: present_date}}
+    var query2 = {date: {$lt: present_date}}
 
+    console.log(present_date)
+
+    db.collection("event").find(query1).sort(mysort1).toArray(function(err, upcoming) {
+        if (err) throw err;
+        console.log(upcoming.length)
+        db.collection("event").find(query2).limit(6).sort(mysort2).toArray(function(err, finished) {
+            if (err) throw err;
+            console.log(finished.length)
+            res.render('event',{'data': upcoming, 'data1': finished})
+        });
     });
 });
 
@@ -66,7 +74,7 @@ app.get('/magazine',function(req,res){
 
 app.get('/announcement',function(req,res){
 
-    db.collection("announcement").find().toArray(function(err, result) {
+    db.collection("achivement").find().toArray(function(err, result) {
         if (err) throw err;
         res.render('announcement',{'data': result})
 
@@ -84,7 +92,13 @@ app.get('/signin',function(req,res){
 app.get('/login',function(req,res){
     res.render('login')
 });
+
+app.get('/course',function(req,res){
+    res.render('course')
+});
 //-------------------------------------------//
+
+
 app.post('/addadmin' , urlencodedParser,function(req,res){
     var email= req.body.email;
 	var password= req.body.password;
@@ -139,16 +153,20 @@ app.post('/loggedin' , urlencodedParser,function(req,res){
 app.post('/addevent',urlencodedParser,function(req,res){
     var eventname= req.body.eventname;
     var date= req.body.date;
+    date = new Date(date);
 	var time= req.body.time;
 	var description= req.body.description;
 	var location= req.body.location;
+	var resourceperson= req.body.resourceperson;
+    var url = req.body.url;
     var data = {
         'eventname':eventname,
         'date':date,
         'time':time,
         'location':location,
         'description': description,
-        'published': Date()
+        'resource person': resourceperson,
+        'url': url
     }
 
     var query = { eventname: eventname };
@@ -190,12 +208,14 @@ app.post('/addmagazine',urlencodedParser,function(req,res){
     var author= req.body.author;
     var genre= req.body.genre;
     var description= req.body.description;
+    var url = req.body.url;
 
     var data = {
         'magazinename': magazinename,
         'author': author,
         'genre': genre,
         'description': description,
+        'url' : url,
         'published': Date()
 
     }
@@ -237,24 +257,26 @@ app.post('/deletemagazine',urlencodedParser,function(req,res){
 app.post('/addannouncement',urlencodedParser,function(req,res){
     var announcementtitle = req.body.announcementtitle;
     var description = req.body.description;
+    var url = req.body.url;
     
     var data = {
         'announcementtitle': announcementtitle,
         'description': description,
+        'url': url,
         'published': Date()
     }
 
     var query = { announcementtitle: announcementtitle };
 
-    db.collection("announcement").find(query).toArray(function(err, result1) {
+    db.collection("achivement").find(query).toArray(function(err, result1) {
         if (err) throw err;
         console.log(result1);
         if(result1.length==0){
-            db.collection('announcement').insertOne(data,(err,collection)=>{
+            db.collection('achivement').insertOne(data,(err,collection)=>{
                 if(err){
                     throw err;
                 }
-                console.log("Record Inserted Successfully Into Announcement  collection");
+                console.log("Record Inserted Successfully Into Achivements  collection");
             });
             res.redirect('update')
         }else{
@@ -270,13 +292,14 @@ app.post('/deleteannouncement',urlencodedParser,function(req,res){
     var reason = req.body.reason;
 
     var myquery = { announcementtitle: announcementtitle };
-    db.collection("announcement").deleteOne(myquery, function(err, obj) {
+    db.collection("achivement").deleteOne(myquery, function(err, obj) {
     if (err) throw err;
     console.log(announcementtitle + " event  deleted from Event Collection");
     res.redirect('update')
 
   });
 });
+
 //-------------------------------------------//
 
 app.listen(PORT,function()

@@ -12,8 +12,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
+      .head1{
+        text-align: left;
+        font-style: normal;
+        color: white;
+        padding: 60px;
+        font-size: 80px;
+        background-color: rgb(198, 33, 32);
+      }
+      body{
+        font-family: 'Times New Roman', Times, serif;
+      }
         .card-body{
-          background-color: rgb(102, 34, 0);
+          background-color: rgb(198, 33, 32);
           color: snow;
         }
     
@@ -22,10 +33,29 @@
           color: black;
           border:white;
         }
+
+        .btn-primary:hover{
+          background-color: rgb(120,33,32);
+        }
+        img{
+          background-image: url('logo.jpg');
+          background-repeat: no-repeat;
+          height: 400px;
+          width: 300px;
+        }
+        footer{
+          font-size: large;
+        }
+        .jumbotron{
+          background-color: rgb(198,33,32);
+          color: white;
+          border-radius: 15px ;
+        }
     </style>
-    <title>Magazines</title>
+    
 </head>
 <body>
+  
     <div class="container">
        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
          <div class="container-fluid">
@@ -36,7 +66,11 @@
          </div>
         </nav>
        <br><br><br>
-       <h1>Magazine</h1><br>
+       <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>Magazines</h1>
+        <!-- <p>All information you need regarding School of Computer Science & Engineering is available here !!</p>  -->
+      </div>
+       
        <hr class="featurette-divider">
        <table>
        <% for(var i=0; i < data.length; i++) { %>
@@ -46,13 +80,14 @@
         <th>
         <% if(i%2==0){%>
            <div class="col-lg-6 mb-4">
-             <div class="card" style="width:400px">
-               <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+             <div class="card" style="width:500px">
+               <img class="card-img-top" alt="Card image" style="width:100%" src=<%= data[i].imgurl %> >
                <div class="card-body">
                  <h4 class="card-title"><%=data[i].magazinename%> </h4>
                  <p class="card-text"><%=data[i].author%></p>
                  <p class="card-text"><%=data[i].description%></p>
-                 <a href="#" class="btn btn-primary stretched-link">Read Magazine</a>
+                 <a class="btn btn-primary stretched-link" href = <%= data[i].link %>>Read Magazine</a>
+                 
                </div>
              </div>
              <br>
@@ -62,14 +97,14 @@
           <th>
          <% if(i%2!=0){%>
            <div class="col-lg-6 mb-4">
-             <div class="card" style="width:400px">
+             <div class="card" style="width:500px">
                <div class="card-body">
                 <h4 class="card-title"><%=data[i].magazinename%> </h4>
                 <p class="card-text"><%=data[i].author%></p>
                 <p class="card-text"><%=data[i].description%></p>
-                 <a href="#" class="btn btn-primary stretched-link">Read Magazine</a>
+                 <a  class="btn btn-primary stretched-link" href = <%= data[i].link %>>Read Magazine</a>
                </div>
-               <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar6.png" alt="Card image" style="width:100%">
+               <img class="card-img-bottom" alt="Card image" style="width:100%" src=<%= data[i].imgurl %>>
              </div>
            </div>
          <% } %>

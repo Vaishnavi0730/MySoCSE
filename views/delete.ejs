@@ -1,0 +1,36 @@
+<style>
+    .serv ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+      }
+      
+      .serv ul li {
+        list-style: none;
+        flex: 0 0 33.333333%;
+      }
+</style>
+<h1>Outline</h1>
+    <form action="/addimage" method="POST">
+        <label for="image">Select a file:</label>
+        <input type="file" id="image" name="image"><br><br>
+        <input type="submit">
+      </form>
+
+
+      <div class="serv">
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <!-- <li>6</li> -->
+        </ul>
+      </div>
+
+        <div class="serv">
+            <% for(var i=0; i < 10; i++) { %>
+                <li><%=i%></li>
+            <% } %>
+        </div>
