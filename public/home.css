@@ -1,0 +1,22 @@
+.fakeimg {
+    text-align: left;
+    height: 50%;
+    width: 50%;
+    background: #aaa;
+  }
+  .jumbotron{
+      background-color: rgb(198,33,32);
+      color: white;
+  }
+  input[type=submit] {
+    background-color:rgba(0, 0, 0, 0.1);
+    margin-top: 0.8em;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #191c38;
+  }

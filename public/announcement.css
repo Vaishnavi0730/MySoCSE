@@ -1,0 +1,31 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  img{
+    background-color: rgb(198,33,32);
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 500px;
+  }
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  footer{
+    font-size: large;
+  }
+  .jumbotron{
+      background-color: rgb(198,33,32);
+      color: white;
+      padding:60px;
+      border-radius: 15px ;
+    }

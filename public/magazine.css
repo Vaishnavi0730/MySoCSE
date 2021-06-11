@@ -1,0 +1,39 @@
+.head1{
+    text-align: left;
+    font-style: normal;
+    color: white;
+    padding: 60px;
+    font-size: 80px;
+    background-color: rgb(198, 33, 32);
+  }
+  body{
+    font-family: 'Times New Roman', Times, serif;
+  }
+    .card-body{
+      background-color: rgb(198, 33, 32);
+      color: snow;
+    }
+
+    .btn-primary{
+      background-color:white;
+      color: black;
+      border:white;
+    }
+
+    .btn-primary:hover{
+      background-color: rgb(120,33,32);
+    }
+    img{
+      background-image: url('logo.jpg');
+      background-repeat: no-repeat;
+      height: 400px;
+      width: 300px;
+    }
+    footer{
+      font-size: large;
+    }
+    .jumbotron{
+      background-color: rgb(198,33,32);
+      color: white;
+      border-radius: 15px ;
+    }
