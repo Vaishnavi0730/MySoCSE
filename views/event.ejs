@@ -12,7 +12,71 @@
   <title>Event</title>
 </head>
 <body>
-    
+   
+  
+  <!-- Modal -->
+  <div class="modal fade" id="carousel3" role="dialog">
+    <div class="modal-dialog modal-lg" id="carousel3">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><%= data[2].eventname%></h4>
+        </div>
+        <div class="modal-body" style="font-size: large;">
+          <p><%= data[2].eventname%></p>
+          <p><%= data[2].date%></p>
+          <p><%= data[2].time%></p>
+          <p><%= data[2].description%></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ? -->
+
+ <!-- Modal -->
+ <div class="modal fade" id="carousel1" role="dialog">
+  <div class="modal-dialog modal-lg" id="carousel1">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><%= data[0].eventname%></h4>
+      </div>
+      <div class="modal-body" style="font-size: large;">
+        <p><%= data[0].eventname%></p>
+        <p><%= data[0].date%></p>
+        <p><%= data[0].time%></p>
+        <p><%= data[0].description%></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ? -->
+
+<!-- Modal -->
+<div class="modal fade" id="carousel2" role="dialog">
+  <div class="modal-dialog modal-lg" id="carousel2">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><%= data[1].eventname%></h4>
+      </div>
+      <div class="modal-body" style="font-size: large;">
+        <p><%= data[1].eventname%></p>
+        <p><%= data[1].date%></p>
+        <p><%= data[1].time%></p>
+        <p><%= data[1].description%></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ? -->
+
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
@@ -25,8 +89,6 @@
 </header>
 
 <main>
-
-  
 
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 
@@ -45,26 +107,6 @@
             <h1><%= data[0].eventname %></h1>
             <h3><%= data[0].description %></h3>
             <p><a class="btn btn-secondary" class="btn btn-info btn-lg" data-toggle="modal" data-target="#carousel1" href="#">View details &raquo;</a></p>
-                 <!-- Modal -->
-                 <div class="modal fade" id="carousel1" role="dialog">
-                  <div class="modal-dialog modal-lg" id="carousel1">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title"><%= data[0].eventname%></h4>
-                      </div>
-                      <div class="modal-body" style="font-size: large;">
-                        <p><%= data[0].eventname%></p>
-                        <p><%= data[0].date%></p>
-                        <p><%= data[0].time%></p>
-                        <p><%= data[0].description%></p>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              <!-- ? -->
           </div>
         </div>
       </div>
@@ -76,26 +118,6 @@
             <h1><%= data[1].eventname %></h1>
             <h3><%= data[1].description %></h3>
             <p><a class="btn btn-secondary" class="btn btn-info btn-lg" data-toggle="modal" data-target="#carousel2" href="#">View details &raquo;</a></p>
-            <!-- Modal -->
-            <div class="modal fade" id="carousel2" role="dialog">
-             <div class="modal-dialog modal-lg" id="carousel2">
-               <div class="modal-content">
-                 <div class="modal-header">
-                   <h4 class="modal-title"><%= data[1].eventname%></h4>
-                 </div>
-                 <div class="modal-body" style="font-size: large;">
-                   <p><%= data[1].eventname%></p>
-                   <p><%= data[1].date%></p>
-                   <p><%= data[1].time%></p>
-                   <p><%= data[1].description%></p>
-                 </div>
-                 <div class="modal-footer">
-                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                 </div>
-               </div>
-             </div>
-           </div>
-         <!-- ? -->
           </div>
         </div>
       </div>
@@ -107,26 +129,6 @@
             <h1><%=data[2].eventname%></h1>
             <h3><%= data[2].description %></h3>
             <p><a class="btn btn-secondary" class="btn btn-info btn-lg" data-toggle="modal" data-target="#carousel3" href="#">View details &raquo;</a></p>
-            <!-- Modal -->
-            <div class="modal fade" id="carousel3" role="dialog">
-             <div class="modal-dialog modal-lg" id="carousel3">
-               <div class="modal-content">
-                 <div class="modal-header">
-                   <h4 class="modal-title"><%= data[2].eventname%></h4>
-                 </div>
-                 <div class="modal-body" style="font-size: large;">
-                   <p><%= data[2].eventname%></p>
-                   <p><%= data[2].date%></p>
-                   <p><%= data[2].time%></p>
-                   <p><%= data[2].description%></p>
-                 </div>
-                 <div class="modal-footer">
-                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                 </div>
-               </div>
-             </div>
-           </div>
-         <!-- ? -->
           </div>
         </div>
       </div>
