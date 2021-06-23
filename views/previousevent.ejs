@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="styles.css" rel="stylesheet">
+<link href="event.css" rel="stylesheet">
+  <title>Event</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><i class="fa fa-home"></i>&nbsp;Home Page</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+   <div class="container">
+   <h1><b>Events of <%=year%></b></h1><br><br>
+      <div class="row">
+        <div class="serv">
+          <ul>
+            <% for(var i=0; i < data1.length; i++) { %>
+            <li>
+              <div class="col-lg-4">
+                <img class="round-image" src=<%=data1[i].url%>>
+                <h2><%= data1[i].eventname %></h2>
+                <p><a class="btn btn-secondary" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal<%=i%>" href="#">View details &raquo;</a></p>
+                 <!-- Modal -->
+                 <div class="modal fade" id="myModal<%=i%>" role="dialog">
+                  <div class="modal-dialog modal-lg" id="<%=i%>">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title"><%= data1[i].eventname%></h4>
+                      </div>
+                      <div class="modal-body" style="font-size: large;">
+                        <p><%=i%></p>
+                        <p><%= data1[i].eventname%></p>
+                        <p><%= data1[i].date%></p>
+                        <p><%= data1[i].time%></p>
+                        <p><%= data1[i].location%></p>
+                        <p><%= data1[i].description%></p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!-- ? -->
+              </div>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+        </div>
+    </div>
+
+  <div style="margin-left: 40em;">
+    <form action="/event" method="GET">
+      <input type="submit" value="2021"><br><br>
+     </form>
+    <form action="/previousyear" method="POST">
+      <input type="hidden" name="year" id="year" value="2020">
+      <input type="submit" value="2020"><br><br>
+    </form>
+    <form action="/previousyear" method="POST">
+      <input type="hidden" name="year" id="year" value="2019">
+      <input type="submit" value="2019"><br><br>
+    </form>
+    <form action="/previousyear" method="POST">
+      <input type="hidden" name="year" id="year" value="2018">
+      <input type="submit" value="2018"><br><br>
+    </form>
+    <form action="/previousyear" method="POST">
+      <input type="hidden" name="year" id="year" value="2017">
+      <input type="submit" value="2017"><br><br>
+    </form>
+    <form action="/previousyear" method="POST">
+      <input type="hidden" name="year" id="year" value="2016">
+      <input type="submit" value="2016"><br><br>
+    </form>
+  </div>
+
+
+  <!-- FOOTER -->
+<footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2021 Y3V, Inc. &middot; <a href="#"></p>
+</footer>
+</main>
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>

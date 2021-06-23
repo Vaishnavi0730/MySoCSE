@@ -56,3 +56,8 @@ body{
   footer{
     font-size: large;
   }
+
+  form{       
+    display:inline-block;  
+    margin:1em;         
+}

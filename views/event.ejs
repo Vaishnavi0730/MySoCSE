@@ -210,7 +210,7 @@
                         <p><%= data1[i].eventname%></p>
                         <p><%= data1[i].date%></p>
                         <p><%= data1[i].time%></p>
-                        <p><%= data[i].location%></p>
+                        <p><%= data1[i].location%></p>
                         <p><%= data1[i].description%></p>
                       </div>
                       <div class="modal-footer">
@@ -228,6 +228,28 @@
         </div>
   </div>
 
+  <div style="margin-left: 40em;">
+    <form action="/previousyear" method="POST">
+      <input type="hidden" name="year" id="year" value="2020">
+      <input type="submit" value="2020"><br><br>
+    </form>
+    <form action="/previousyear" method="POST">
+      <input type="hidden" name="year" id="year" value="2019">
+      <input type="submit" value="2019"><br><br>
+    </form>
+    <form action="/previousyear" method="POST">
+      <input type="hidden" name="year" id="year" value="2018">
+      <input type="submit" value="2018"><br><br>
+    </form>
+    <form action="/previousyear" method="POST">
+      <input type="hidden" name="year" id="year" value="2017">
+      <input type="submit" value="2017"><br><br>
+    </form>
+    <form action="/previousyear" method="POST">
+      <input type="hidden" name="year" id="year" value="2016">
+      <input type="submit" value="2016"><br><br>
+    </form>
+  </div>
 
 
   <!-- FOOTER -->

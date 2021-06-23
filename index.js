@@ -41,6 +41,11 @@ app.get('/', function (req, res) {
     res.set({
         "Allow-access-Allow-Origin": '*'
     })
+    let currentDate = new Date();
+    let currentDate1 = new Date().toISOString();
+    console.log(currentDate)
+    console.log(currentDate1.substring(0,4))
+    
 	 res.render('home');
 });
 
@@ -48,8 +53,9 @@ app.get('/event',function(req,res){
     var mysort1 = { date: 1 , time: 1};
     var mysort2 = { date: -1 , time: -1};
     var present_date = new Date()
+    var start = new Date(2021,1,1)
     var query1 = {date: {$gt: present_date}}
-    var query2 = {date: {$lt: present_date}}
+    var query2 = {date: {$lt: present_date, $gt: start}}
 
     console.log(present_date)
 
@@ -96,6 +102,11 @@ app.get('/login',function(req,res){
 app.get('/course',function(req,res){
     res.render('course')
 });
+
+app.get('/placement',function(req,res){
+    res.render('placement')
+});
+
 //-------------------------------------------//
 
 
@@ -300,10 +311,22 @@ app.post('/deleteannouncement',urlencodedParser,function(req,res){
   });
 });
 
+app.post('/previousyear',urlencodedParser,function(req,res){
+    var year = req.body.year;
+    console.log(year)
+    var start = new Date(year,1,1);
+    var end = new Date(year,12,31);
+    
+    db.collection("event").find({date: {$gte: start, $lt: end}}).toArray(function(err, result1) {
+        if (err) throw err;
+        console.log(result1.length)
+        res.render('previousevent',{'year': year, 'data1': result1})
+    });
+});
+
 //-------------------------------------------//
 
-app.listen(PORT,function()
-{
+app.listen(PORT,function(){
   console.log("Server running on port "+ PORT);
 });
 
